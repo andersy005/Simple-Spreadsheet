@@ -5,18 +5,18 @@ import os.path
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
 class Root(object):
-    converter = '''<!DOCTYPE>
+    convertor = '''<!DOCTYPE>
     <html>
     <head>
     <link rel="stylesheet" href="static/css/smoothness/jquery-ui-1.8.4.custom.css" type="text/css" media="screen, projection" />
-    <script type="text/javascript" src="static/jquery-1.12.2.min.js" ></script>
-    <script type="text/javascript" src="static/jquery-ui-1.11.4.custom/jquery-ui.min.j" ></script>
+    <script type="text/javascript" src="static/jquery-1.4.2.js" ></script>
+    <script type="text/javascript" src="static/jquery-ui-1.8.4.custom.min.js" ></script>
     </head>
 
     <body id ="spreadsheet_example">
     <div id = "example">
         <form id = "unitconversion">
-        <input name="from" type="text" value ="1/>
+        <input name="from" type="text" value ="1"/>
         <select name ="fromunit">
             <option selected = "true">inch </option>
             <option>cm</option>
@@ -34,6 +34,7 @@ class Root(object):
     </div>
     <p id="logging">
     </p>
+    <script type="text/javascript" src="unitconverter.js"></script>
     </body>
 
     </html>'''
@@ -49,6 +50,12 @@ if __name__ == "__main__":
             {
                 'tools.staticdir.on': True,
                 'tools.staticdir.dir': os.path.join(current_dir, "static")
+
+            },
+            '/unitconverter.js':
+            {
+                'tools.staticdir.on': True,
+                'tools.staticdir.filename': os.path.join(current_dir,"unitconverter.js")
 
             }
     })
