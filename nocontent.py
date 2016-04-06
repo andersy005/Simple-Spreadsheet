@@ -16,7 +16,9 @@ class Root(object):
 
 <body id="spreadsheet_example">
 <div id ="example">
-Hello World!
+
+<q><em>Hello World!</em><q>
+<input textarea= >
 </div>
 </body>
 </html> '''
