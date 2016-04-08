@@ -84,6 +84,24 @@ jQuery.fn.sheet = function(options){
 
 		}
 
-		function
+		function getvalue(org, settings){
+			d = $(org)
+			return d.filter(".formula").text()
+		}
+
+		/*make every cell editable with the jEditable plugin */
+		this.find(".cell").each(function(index, element){
+			$(this).editable(setvalue, {type:'text', onblur:'cancel', data:getvalue});
+		});
+
+		$(".cell").css({'width': opts.width, 'border-collapse': 'collapse'});
+
+		return this;
 	}
+}
+jQuery.fn.sheet.defaults ={
+	rows : 4,
+	cols : 4,
+	width : '100px',
+	logging: false
 }
