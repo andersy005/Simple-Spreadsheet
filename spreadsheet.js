@@ -84,6 +84,12 @@ jQuery.fn.sheet = function(options){
 
 	$(".cell").css({'width':opts.width,'border-collapse':'collapse'});
 
+	/* add some functions from the built-in Math object to global namespace */
+
+	window['sin'] = Math.sin;
+	window['cos'] = Math.cos;
+	window['tan'] = Math.tan;
+
 	return this;
 }
 
