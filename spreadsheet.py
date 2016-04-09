@@ -5,26 +5,22 @@ current_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Root(object):
-    spreadsheet = '''<!DOCTYPE html>
+    spreadsheet = '''<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
-	<title></title>
-	<link rel="stylesheet" type="text/css" href="static/css/redmond/jquery-ui-1.8.1.custom.css" media="screen, projection">
-	<script type="text/javascript" src="static/jquery-1.4.2.js" ></script>
-    <script type="text/javascript" src="static/jquery-ui-1.8.1.custom.min.js" ></script>
-    <script type="text/javascript" src="static/jeditable.min.js"></script>
-    <script type="text/javascript" src="spreadsheet.js"></script>
+<link rel="stylesheet" href="static/css/smoothness/jquery-ui-1.8.4.custom.css" type="text/css" media="screen, projection" />
+<script type="text/javascript" src="static/jquery-1.4.2.js" ></script>
+<script type="text/javascript" src="static/jquery-ui-1.8.4.custom.min.js" ></script>
+<script type="text/javascript" src="static/jeditable.js" ></script>
+<script type="text/javascript" src="spreadsheet.js" ></script>
 </head>
-
 <body id="spreadsheet_example">
-<div id="example">
-<p id = "logging"> hello
+<div id="example"></div>
+<p id="logging">
 </p>
 <script type="text/javascript">
-    $("example").sheet({cols:8, rows:10});
+$("#example").sheet({cols:8,rows:10});
 </script>
-</div>
-
 </body>
 </html>'''
 
